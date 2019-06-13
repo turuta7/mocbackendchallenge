@@ -25,6 +25,6 @@ app.listen(PORT, () => {
 
 
 
-/* "prettier --write",
-       "eslint --fix --max-warnings 0",
-       "git add" */
+//"prettier --write",
+//       "eslint --fix --max-warnings 0",
+//       "git add" 
