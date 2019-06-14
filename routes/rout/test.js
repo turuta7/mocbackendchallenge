@@ -2,10 +2,10 @@ const Router = require('koa-router');
 
 const router = new Router();
 
-router.get('/test', async (ctx, next) => {
+router.get('/', async (ctx, next) => {
     try {
         ctx.status = 200;
-        ctx.body = { top: 'curs' };
+        ctx.body = 'Server work';
 
     } catch (error) {
         console.log('error');
