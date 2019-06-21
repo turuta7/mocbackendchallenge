@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 module.exports = {
+
   development: {
     username: 'tur',
     password: 'tur098',
@@ -9,6 +10,7 @@ module.exports = {
     dialect: 'postgres',
     operatorsAliases: false,
   },
+
   production: {
     username: process.env.username,
     password: process.env.password,
