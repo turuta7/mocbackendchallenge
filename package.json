@@ -2,7 +2,7 @@
   "name": "mocbackendchallenge",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
     "lint:js": "eslint ./src",
@@ -28,7 +28,11 @@
     "prettier": "^1.18.2"
   },
   "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "bcrypt": "^3.0.6",
+    "curl": "^0.1.4",
     "dotenv": "^8.0.0",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-bodyparser": "^4.2.1",
