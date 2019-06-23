@@ -19,8 +19,8 @@ module.exports = {
     dialect: 'postgres',
     operatorsAliases: false,
     dialectOptions: {
-      "ssl": true,
-      "native": true
+      ssl: true,
+      native: true
     }
 
   },
