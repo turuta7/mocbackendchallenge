@@ -8,6 +8,8 @@ const User = require('../../models').user;
 router.post('/rooms', async (ctx, next) => {
     const { header } = ctx.request;
     const { body } = ctx.request
+    console.log(body);
+
     try {
         if (!header) {
             ctx.status = 500;

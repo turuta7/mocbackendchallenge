@@ -43,7 +43,8 @@
     "pg": "^7.11.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.8.11",
-    "sequelize-cli": "^5.5.0"
+    "sequelize-cli": "^5.5.0",
+    "ws": "^7.0.1"
   },
   "lint-staged": {
     "src/*.js": []

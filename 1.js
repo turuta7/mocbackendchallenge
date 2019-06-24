@@ -1,13 +1,16 @@
-const auth = `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`;
+const WebSocket = require('ws')
 
-// let header = { 'Authorization': auth };
+const url = 'ws://localhost:8080'
+const connection = new WebSocket(url)
 
-console.log(auth);
-const base64Credentials = auth.split(' ')[1];
-const credentials = Buffer.from(base64Credentials, 'base64').toString('ascii');
-//  const [username, password] = credentials.split(':');
+connection.onopen = () => {
+    connection.send('Message From Client')
+}
 
-console.log(credentials.split(':')[0]);
+connection.onerror = (error) => {
+    console.log(`WebSocket error: ${error}`)
+}
 
-
-// var request = client.request('GET', '/', header);
+connection.onmessage = (e) => {
+    console.log(e.data)
+}

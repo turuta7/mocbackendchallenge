@@ -4,8 +4,8 @@ const router = new Router();
 
 const Rooms = require('../../models').rooms;
 
-router.post('/rooms/id', async (ctx, next) => {
-    const { id } = ctx.params
+router.delete('/rooms/:id', async (ctx, next) => {
+    const { id } = ctx.params;
     try {
 
         if (!Number(id)) {
@@ -13,6 +13,11 @@ router.post('/rooms/id', async (ctx, next) => {
             ctx.body = { message: 'error ID' }
             return
         }
+
+
+
+
+
         const room = await Rooms.findOne({
             where: { id },
             attributes: { exclude: ['createdAt', 'updatedAt'] }
