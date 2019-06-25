@@ -7,15 +7,21 @@ const koaBody = require('koa-body');
 
 const app = new Koa();
 
+// const WebSocketServer = require('ws').Server,
+
 const WebSocket = require('ws')
 
 // web Socket
 const wss = new WebSocket.Server({ port: 8080 })
 wss.on('connection', ws => {
     ws.on('message', message => {
-        console.log(`Received message => ${message}`)
+        //  console.log(massage.join);
+
+        console.log(`test: ${message}`)
     })
-    ws.send('Hello! turuta')
+
+
+    // ws.send('Hello! turuta')
 })
 
 
